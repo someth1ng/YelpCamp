@@ -1,7 +1,9 @@
 let express     = require('express'),
-    app         = express(),
     bodyParser  = require('body-parser'),
-    mongoose    = require('mongoose')
+    mongoose    = require('mongoose'),
+    Campground  = require("./models/campground"),
+    // Comment     = require("./models/user"),
+    app         = express()
 
 // connect database
 mongoose.connect("mongodb://localhost/YelpCamp", { useNewUrlParser: true });
@@ -11,13 +13,6 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 //Schema Setup
-let campgroundSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    description: String
-});
-
-let Campground = mongoose.model("Campground", campgroundSchema);
 
 // Campground.create({ 
 //     name: 'Long Beaches', image: "https://cdn.pixabay.com/photo/2016/11/21/16/03/campfire-1846142_960_720.jpg",
