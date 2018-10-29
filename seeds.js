@@ -5,17 +5,17 @@ let Comment = require('./models/comment');
 let data = [
     {
         name: 'River Moutain',
-        image: 'https://cdn.pixabay.com/photo/2017/07/17/16/21/nature-2512944_960_720.jpg',
+        image: 'https://images.pexels.com/photos/111362/pexels-photo-111362.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         description: "there is a river"
     },
     {
         name: 'Forest Moutain',
-        image: 'https://cdn.pixabay.com/photo/2015/07/09/01/59/picnic-table-837221_960_720.jpg',
+        image: 'https://images.pexels.com/photos/116104/pexels-photo-116104.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         description: "there is a table"
     },
     {
         name: 'Glenns Lake',
-        image: 'https://c2.staticflickr.com/8/7368/9811937955_03d073d6ef_b.jpg',
+        image: 'https://images.pexels.com/photos/803226/pexels-photo-803226.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
         description: "there is a big lake"
     }
 ];
