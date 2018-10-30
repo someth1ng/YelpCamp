@@ -24,6 +24,15 @@
                     </div>
                 </figcaption>
                 <p><%= campground.description %></p>
+                <p><em>Submitted By <%= campground.author.username %></em></p>
+                <% if (currentUser && campground.author.id.equals(currentUser._id)) { %>
+                    <div class="row mx-auto">
+                        <a href="/campgrounds/<%= campground._id %>/edit" class="btn btn-sm btn-warning">Edit</a>
+                        <form action="/campgrounds/<%=campground._id%>?_method=DELETE" method="POST">
+                            <button class="btn btn-sm btn-danger ml-1">Delete</button>
+                        </form>
+                    </div>
+                <% } %>
             </figure>
             <div class="card">
                 <div class="card-header">
@@ -38,7 +47,7 @@
                     <% campground.comments.forEach(function(comment){ %>
                         <div class="row">
                             <div class="col-md-12">
-                                <strong><%= comment.author %></strong>
+                                <strong><%= comment.author.username %></strong>
                                 <span class="float-right">1 hour ago</span>
                                 <p>
                                     <%= comment.text %>
